@@ -4,5 +4,5 @@ Strategy Added
 
 phpunit tests/strategy/duck/DuckTest.php  --testdox
 
-phpunit tests/strategy/duck/CustomerTest.php  --testdox
+phpunit tests/Strategy/Customer/CustomerTest.php --testdox
 
