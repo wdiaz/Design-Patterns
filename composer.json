@@ -1,0 +1,20 @@
+{
+    "name": "walterdiaz/Patterns",
+    "description": "PSR-4 Wrapper for Design Pattern Testing",
+    "license": "MIT",
+    "keywords": ["patterns"],
+    "authors": [
+        {
+            "name": "Walter Diaz"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "WalterDiaz\\Patterns\\": "src"
+        }
+    }
+}
