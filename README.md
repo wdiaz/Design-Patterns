@@ -2,10 +2,12 @@
 
 Strategy Added
 
-phpunit tests/Strategy/Duck/DuckTest.php  --testdox
+phpunit tests/Strategy/Duck/DuckTest.php  [--testdox]
 
-phpunit tests/Strategy/Customer/CustomerTest.php --testdox
+phpunit tests/Strategy/Customer/CustomerTest.php [--testdox]
 
-Observer Aded
+Observer Added
 
-phpunit tests/Observer/Weather/WeatherTest.php --testdox
+phpunit tests/Observer/Weather/WeatherTest.php [--testdox]
+
+phpunit tests/Observer/Numerical/NumericalTest.php [--testdox]
