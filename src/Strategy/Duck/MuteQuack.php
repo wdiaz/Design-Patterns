@@ -7,7 +7,7 @@ namespace WalterDiaz\Patterns\Strategy\Duck;
  *
  * @author wdiaz
  */
-class MuteQuak implements QuackBehavior{
+class MuteQuack implements QuackBehavior{
     
     public function doQuack() {
         print "MuteQuack";

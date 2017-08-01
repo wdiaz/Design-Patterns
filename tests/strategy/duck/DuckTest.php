@@ -2,6 +2,7 @@
 
 use WalterDiaz\Patterns\Strategy\Duck\Context;
 use WalterDiaz\Patterns\Strategy\Duck\FlyWithWings;
+use WalterDiaz\Patterns\Strategy\Duck\MuteQuack;
 use WalterDiaz\Patterns\Strategy\Duck\Quack;
 
 class DuckTest extends PHPUnit_Framework_TestCase {
@@ -9,8 +10,8 @@ class DuckTest extends PHPUnit_Framework_TestCase {
     public function testQuack() {
         $context = new Context();
         $context->setFlyBehavior(new FlyWithWings());
-        $context->setQuackBehavior(new Quack());
-        $this->expectOutputString('Quack');
+        $context->setQuackBehavior(new MuteQuack());
+        $this->expectOutputString('MuteQuack');
         print($context->doCuak());
       }
 
