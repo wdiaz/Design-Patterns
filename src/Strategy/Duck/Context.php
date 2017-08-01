@@ -7,14 +7,18 @@ namespace WalterDiaz\Patterns\Strategy\Duck;
  *
  * @author wdiaz
  */
-class Duck {
+class Context {
     
     private $quackBehavior;
+
     private $flyBehavior;
-    
-    public function __construct() {
-        $this->quackBehavior = new Quack();
-        $this->flyBehavior = new FlyWithWings();
+
+    public function setQuackBehavior(QuackBehavior $quackHehavior) {
+        $this->quackBehavior = $quackHehavior;
+    }
+
+    public function setFlyBehavior(FlyBehavior $flyBehavior) {
+        $this->flyBehavior = $flyBehavior;
     }
 
     public function doCuak() {
