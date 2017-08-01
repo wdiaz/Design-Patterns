@@ -15,11 +15,19 @@ class DuckTest extends PHPUnit_Framework_TestCase {
         print($context->doCuak());
       }
 
-      public function testFly() {
-          $context = new Context();
-          $context->setFlyBehavior(new FlyWithWings());
-          $context->setQuackBehavior(new Quack());
-          $this->expectOutputString('FlyWithWings');
-          print($context->doFly());
-      }
+    public function testFly() {
+        $context = new Context();
+        $context->setFlyBehavior(new FlyWithWings());
+        $context->setQuackBehavior(new Quack());
+        $this->expectOutputString('FlyWithWings');
+        print($context->doFly());
+    }
+
+    public function testInstances() {
+        $context = new Context();
+        $context->setQuackBehavior(new Quack());
+        $context->setFlyBehavior(new FlyWithWings());
+        $this->assertInstanceOf(Quack::class, $context->getQuackBehavior());
+        $this->assertInstanceOf(FlyWithWings::class, $context->getFlyBehavior());
+    }
 }

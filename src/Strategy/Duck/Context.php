@@ -17,8 +17,16 @@ class Context {
         $this->quackBehavior = $quackHehavior;
     }
 
+    public function getQuackBehavior() {
+        return $this->quackBehavior;
+    }
+
     public function setFlyBehavior(FlyBehavior $flyBehavior) {
         $this->flyBehavior = $flyBehavior;
+    }
+
+    public function getFlyBehavior() {
+        return $this->flyBehavior;
     }
 
     public function doCuak() {
