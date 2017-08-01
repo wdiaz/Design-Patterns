@@ -15,3 +15,4 @@ $decimal    = new Decimal($observable);
 $hexa       = new Hexa($observable);
 $octal      = new Octal($observable);
 $observable->setValue(12);
+$observable->setValue(10);
