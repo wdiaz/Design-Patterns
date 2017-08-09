@@ -1,6 +1,8 @@
 <?php
 /**
- * Web interface for testing outputs
+ *
+ * Web interface for testing outputs.
+ *
  */
 
 require_once 'vendor/autoload.php';
