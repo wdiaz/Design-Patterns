@@ -16,6 +16,14 @@ class User
      */
     private $ssn;
 
+    private function __construct() {
+        // No default instatiation allowed
+    }
+    
+    private function __clone() {
+        // No cloning allowed
+    }
+
     public static function getInstance()
     {
         if(null === self::$instance) {
