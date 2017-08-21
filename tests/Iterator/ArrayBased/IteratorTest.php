@@ -14,7 +14,7 @@ class IteratorTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(2, $iterator->getSize());
     }
     
-    public function testNext()
+    public function testNextFalse()
     {
         $collection = new RecordCollection();
         $collection->add(1);
@@ -25,6 +25,18 @@ class IteratorTest extends PHPUnit_Framework_TestCase
         $iterator->next();
         $iterator->next();
         $this->assertFalse($iterator->next());
+    }
+    
+    public function testNextTrue()
+    {
+        $collection = new RecordCollection();
+        $collection->add(1);
+        $collection->add(2);
+        $collection->add(3);
+        $iterator = $collection->createIterator();
+        $iterator->next();
+        $iterator->next();
+        $this->assertTrue($iterator->next());
     }
     
     public function testNextEquals()
