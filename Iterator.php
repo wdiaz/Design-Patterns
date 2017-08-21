@@ -8,10 +8,12 @@ use WalterDiaz\Patterns\Iterator\ArrayBased\RecordCollection;
 $collection = new RecordCollection();
         
 for($i=0; $i < rand(15, 25); $i++) {
-    $collection->add(new Person($i));
+    $collection->add(new Person('Name_' . $i));
 }
 $iterator = $collection->createIterator();
-while($iterator->hasNext()) {
-    $item = $iterator->next();
+$iterator->rewind();
+while($iterator->valid()) {
+    $item = $iterator->current();
     printf("Name %s\r", $item->getName());
+    $iterator->next();
 }
