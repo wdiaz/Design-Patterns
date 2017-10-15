@@ -2,6 +2,8 @@
 
 namespace WalterDiaz\Patterns\Accounts;
 
+use Exception;
+
 class CheckingAccount extends AbstractAccount
 {
     /**
@@ -13,7 +15,11 @@ class CheckingAccount extends AbstractAccount
 
     public function withdrawal($amount)
     {
-        $newBalance = $this->getBalance() - abs($amount);
+        $amount  = abs($amount);
+        if($this->getBalance() < $amount) {
+            throw new Exception('Insuficient Funds');
+        }
+        $newBalance = $this->getBalance() - $amount;
         $this->setBalance($newBalance);
         return $this;
     }
